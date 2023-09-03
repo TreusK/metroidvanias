@@ -1,0 +1,45 @@
+* {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+main {
+	width: 80%;
+	margin: 0 auto;
+	padding: 30px;
+	background: lightsalmon;
+	text-align: center;
+}
+
+#gamesContainer {
+	display: flex;
+	justify-content: space-around;
+	gap: 20px;
+	flex-wrap: wrap;
+	max-width: 900px;
+	margin: 0 auto;
+}
+
+#searchBar {
+	padding: 20px;
+}
+input, button {
+  padding: 10px;
+}
+
+.gameCard {
+	background: lightcyan;
+	width: 200px;
+	height: 300px;
+	border: solid 2px red;
+}
+
+.fillingEmpty {
+	width: 200px;
+	height: 0;
+}
+
+.hideGame {
+	display: none;
+}
