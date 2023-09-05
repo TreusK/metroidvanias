@@ -12,6 +12,17 @@ main {
 	text-align: center;
 }
 
+
+/* Search */
+#searchBar {
+	padding: 20px;
+}
+input, button {
+  padding: 10px;
+}
+
+
+/* Games */
 #gamesContainer {
 	display: flex;
 	justify-content: space-around;
@@ -21,13 +32,6 @@ main {
 	margin: 0 auto;
 }
 
-#searchBar {
-	padding: 20px;
-}
-input, button {
-  padding: 10px;
-}
-
 .gameCard {
 	background: lightcyan;
 	width: 200px;
@@ -35,6 +39,18 @@ input, button {
 	border: solid 2px red;
 }
 
+.gameImgContainer {
+	width: 100%;
+	height: 150px;
+}
+
+.gameImgContainer img {
+	width: 100%;
+	height: auto;
+}
+
+
+/* Extra */
 .fillingEmpty {
 	width: 200px;
 	height: 0;

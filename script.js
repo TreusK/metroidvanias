@@ -7,6 +7,8 @@ let allGames = document.querySelectorAll('.gameCard')
 searchBtn.addEventListener('click', searchGames);
 resetBtn.addEventListener('click', resetGameList);
 
+
+//filter games depending on searched values
 function searchGames(e) {
 	e.preventDefault();
 	for(let game of allGames) {
@@ -22,6 +24,7 @@ function searchGames(e) {
 	}
 }
 
+//reset search to show all games again
 function resetGameList(e) {
 	e.preventDefault();
 	for(let game of allGames) {
