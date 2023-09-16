@@ -1,24 +1,31 @@
-let textInput = document.querySelector('.input');
-let searchBtn = document.querySelector('.searchBtn');
+let textInput = document.querySelector('.textInput');
+let gamesForm = document.querySelector('.gamesForm');
 let resetBtn = document.querySelector('.resetBtn');
 let allGames = document.querySelectorAll('.gameCard')
 
 
-searchBtn.addEventListener('click', searchGames);
+gamesForm.addEventListener('submit', handleSubmit);
 resetBtn.addEventListener('click', resetGameList);
 
 
 //filter games depending on searched values
-function searchGames(e) {
+function handleSubmit(e) {
 	e.preventDefault();
+	const formData = new FormData(e.target);
+  const formProps = Object.fromEntries(formData);
 	for(let game of allGames) {
 		game.classList.remove('hideGame');
 	}
-	let searchedValue = textInput.value.toLowerCase();
+	let searchedTitle = formProps.title.toLowerCase();
+	let searchedScore = formProps.score;
 
+	//Hide games that do not match search query
 	for(let game of allGames) {
+		let score = game.children[3].innerText;
 		let title = game.children[1].innerText.toLowerCase();
-		if (!title.includes(searchedValue)) {
+		if (!title.includes(searchedTitle)) {
+			game.classList.add('hideGame');
+		} else if (searchedScore != 'all' && searchedScore != score[0]) {
 			game.classList.add('hideGame');
 		}
 	}

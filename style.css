@@ -24,7 +24,7 @@ main {
 #searchBar {
 	padding: 20px;
 }
-input, button {
+input, button, select {
   padding: 10px;
   font-family: "Play", sans-serif;
 }
