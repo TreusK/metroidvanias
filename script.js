@@ -8,7 +8,7 @@ gamesForm.addEventListener('submit', handleSubmit);
 resetBtn.addEventListener('click', resetGameList);
 
 
-//filter games depending on searched values
+//filter games on search
 function handleSubmit(e) {
 	e.preventDefault();
 	const formData = new FormData(e.target);
