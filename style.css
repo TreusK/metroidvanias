@@ -85,6 +85,9 @@ input, button, select {
 }
 
 
+.score0 {
+	color: grey;
+}
 .score2{
 	color: red;
 }
