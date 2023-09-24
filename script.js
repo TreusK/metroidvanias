@@ -1,19 +1,18 @@
 let textInput = document.querySelector('.textInput');
-let gamesForm = document.querySelector('.gamesForm');
+let scoreInput = document.querySelector('#score');
+let allGames = document.querySelectorAll('.gameCard');
 let resetBtn = document.querySelector('.resetBtn');
-let allGames = document.querySelectorAll('.gameCard')
+
+textInput.addEventListener('input', handleChange);
+scoreInput.addEventListener('change', handleChange)
+resetBtn.addEventListener('click', showAll);
 
 
-gamesForm.addEventListener('submit', handleSubmit);
-resetBtn.addEventListener('click', resetGameList);
-
-
-//filter games on search
-function handleSubmit(e) {
-	e.preventDefault();
-	const formData = new FormData(e.target);
+//Search onchange instead of on submit
+function handleChange(e) {
+	const formData = new FormData(e.target.form);
   const formProps = Object.fromEntries(formData);
-	for(let game of allGames) {
+  for(let game of allGames) {
 		game.classList.remove('hideGame');
 	}
 	let searchedTitle = formProps.title.toLowerCase();
@@ -31,11 +30,9 @@ function handleSubmit(e) {
 	}
 }
 
-//reset search to show all games again
-function resetGameList(e) {
-	e.preventDefault();
+//reset type inputs doesn't remove the hidden class obviously, so I need this
+function showAll() {
 	for(let game of allGames) {
-		game.classList.remove('hideGame');
+		game.classList.remove('hideGame')
 	}
-	textInput.value = '';
 }
