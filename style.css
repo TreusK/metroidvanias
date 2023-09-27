@@ -10,7 +10,7 @@
 }
 
 body {
-	background: #f0f0f0;
+	background: #e0e0e0;
 }
 
 main {
@@ -25,17 +25,36 @@ main {
 }
 
 h1 {
-	margin: 30px 0;
+	margin-bottom: 30px;
+	padding: 20px;
+	color: white;
+	background: #333;
+	user-select: none;
+}
+
+/* Button reset */
+.btn{
+  outline: none;
+  background: transparent;
+  border: 1px solid transparent;
 }
 
 
 /* Search */
 #searchBar {
-	padding: 20px;
+	padding: 40px;
 }
 input, button, select {
   padding: 10px;
   font-family: "Play", sans-serif;
+}
+.btn {
+	color: white;
+	background: #333;
+}
+.btn:hover {
+	cursor: pointer;
+	background: #555;
 }
 
 
@@ -109,6 +128,16 @@ input, button, select {
 .score8{
 	color: green;
 }
+
+
+/* Footer */
+footer {
+	background: #333;
+	color: white;
+	margin-top: 40px;
+	padding: 10px;
+}
+
 
 /* Extra */
 .fillingEmpty {
