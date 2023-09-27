@@ -12,9 +12,6 @@ resetBtn.addEventListener('click', showAll);
 function handleChange(e) {
 	const formData = new FormData(e.target.form);
   const formProps = Object.fromEntries(formData);
-  for(let game of allGames) {
-		game.classList.remove('hideGame');
-	}
 	let searchedTitle = formProps.title.toLowerCase();
 	let searchedScore = formProps.score;
 
@@ -26,6 +23,8 @@ function handleChange(e) {
 			game.classList.add('hideGame');
 		} else if (searchedScore != 'all' && searchedScore != score[0]) {
 			game.classList.add('hideGame');
+		} else {
+			game.classList.remove('hideGame')
 		}
 	}
 }

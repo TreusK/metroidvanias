@@ -9,15 +9,23 @@
 	src: url('./fonts/Play-Regular.ttf') format('truetype');
 }
 
+body {
+	background: #f0f0f0;
+}
+
 main {
 	width: 80%;
 	min-width: 300px;
 	margin: 0 auto;
 	padding: 30px;
-	background: lightsalmon;
+	background: white;
 	text-align: center;
 	font-family: "Play", sans-serif;
 	min-height: 100vh;
+}
+
+h1 {
+	margin: 30px 0;
 }
 
 
@@ -42,7 +50,7 @@ input, button, select {
 }
 
 .gameCard {
-	background: lightcyan;
+	background: #f0f0f0;
 	width: 200px;
 	height: 300px;
 	border: solid 1px black;
